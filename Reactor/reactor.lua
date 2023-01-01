@@ -372,14 +372,21 @@ function modifyRods(limit, number)
             controlsSize['inX'] + controlsSize['width'], controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4,
             colors.black })
 
+    local control_margins = 7.2
     table.insert(texts,
-        { controlsSize['inX'] + 5, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4, minPowerRod .. '%',
+        { controlsSize['inX'] + control_margins + 0.2, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4,
+            minPowerRod .. '%',
             colors.lightBlue, colors.black })
+
     table.insert(texts,
-        { controlsSize['inX'] + 13, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4, '--', colors.white,
+        { controlsSize['inX'] + (control_margins * 2) + 3, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4,
+            '--',
+            colors.white,
             colors.black })
+
     table.insert(texts,
-        { controlsSize['inX'] + 20, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4, maxPowerRod .. '%',
+        { controlsSize['inX'] + control_margins * 3.6, controlsSize['inY'] + (controlsSize['sectionHeight'] * 1) + 4,
+            maxPowerRod .. '%',
             colors.purple, colors.black })
 
     setInfoToFile()
